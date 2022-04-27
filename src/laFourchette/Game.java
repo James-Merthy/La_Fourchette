@@ -28,7 +28,7 @@ public class Game {
 
         int estValid = 0;
 
-        int choix = 0 ;
+        int choix = 0;
 
         System.out.println("entrez un nombre entier de 0 à 100");
 
@@ -37,28 +37,54 @@ public class Game {
 
             int number = scanner.nextInt();
 
-            if (number > 100 || number < 0 ){
+            if (number > 100 || number < 0) {
 
                 System.out.println("votre nombre n'est pas valid recommencez ! ");
-            }else{
+            } else {
 
-                choix = number ;
-                estValid ++ ;
+                choix = number;
+                estValid++;
             }
 
         }
 
 
+        return choix;
+    }
+
+    /**
+     * Cette méthode reçois en param 2 entiers et les compares
+     * retourne false si ils sont différents sinon c'est true
+     *
+     * @param nombreAuHazard
+     * @param choixUtilisateur
+     * @return
+     */
 
 
-        return  choix ;
+    public static boolean comparaison(int nombreAuHazard, int choixUtilisateur) {
+
+        boolean sonEgaux = false;
+
+        if (nombreAuHazard == choixUtilisateur) {
+
+            return sonEgaux = true;
+
+        } else {
+
+            return sonEgaux;
+
+        }
+
     }
 
     public static void main(String[] args) {
 
         int i = 0;
 
-        askNumber();
+        System.out.println(comparaison(5,5));
+        System.out.println(comparaison(7,5));
+        System.out.println(comparaison(nombreAléatoire(),askNumber()));
 
     }
 }
