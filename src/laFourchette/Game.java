@@ -84,11 +84,10 @@ public class Game {
      * ou plus petit que le nombre du bot
      * il a 5 chances pas une de plus
      */
-    public static void la_Game (){
+    public static void la_Game() {
 
         System.out.println("=============== La fourchette ==========================");
-        int nombre_de_chance = 5 ;
-
+        int nombre_de_chance = 5;
 
 
         int Le_bon_nombre = nombreAléatoire();
@@ -103,39 +102,36 @@ public class Game {
 
             System.out.println(displayChance);
 
-            int nb = askNumber() ;
+            int nb = askNumber();
 
-            if (comparaison(Le_bon_nombre, nb)){
+            if (comparaison(Le_bon_nombre, nb)) {
                 System.out.println("vous avez trouvez le nombre bravo !!!");
-                nombre_de_chance = -1 ;
+                nombre_de_chance = -1;
 
             } else if (nb > Le_bon_nombre) {
 
                 System.out.println("votre nombre est trop grand");
 
-                nombre_de_chance -- ;
-            }else{
+                nombre_de_chance--;
+            } else {
 
                 System.out.println("votre nombre est trop petit");
-                nombre_de_chance --;
+                nombre_de_chance--;
             }
 
 
-
         }
 
-        if (nombre_de_chance == 0){
+        if (nombre_de_chance == 0) {
 
             System.out.println("vous avez perdu !");
         }
-
 
 
     }
 
     public static void main(String[] args) {
 
-        int i = 0;
 
         la_Game();
 
