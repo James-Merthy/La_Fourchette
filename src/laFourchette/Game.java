@@ -16,7 +16,7 @@ public class Game {
     /**
      * Cette méthode demande a l'utilisateur
      * de taper un chiffre
-     * cette méthode retourne le chiffre 
+     * cette méthode retourne le chiffre
      * @return
      */
     public static int askNumber(){
